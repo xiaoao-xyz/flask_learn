@@ -1,0 +1,4 @@
+{
+    "gitlens.currentLine.enabled": false,
+    "python.pythonPath": "./venv/bin/python"
+}
