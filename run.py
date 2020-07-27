@@ -3,9 +3,11 @@
 from flask import Flask, render_template, request, url_for, redirect, session, flash
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_script import Manager
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import Required
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 class NameForm(FlaskForm):
@@ -23,6 +25,7 @@ app.config['SECRET_KEY'] = 'hard to guess string'
 
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+manager = Manager(app)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -73,8 +76,9 @@ def fill_form():
 with app.test_request_context():
     print(url_for('get_ua', _external=True, lol=3))
     from pprint import pprint
-    pprint(get_flashed_messages())
+
     # print(app.config)
 
 if __name__ == '__main__':
     app.run(debug=True)
+    manager.run()

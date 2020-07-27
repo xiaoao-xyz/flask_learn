@@ -1,4 +1,4 @@
 {
     "gitlens.currentLine.enabled": false,
-    "python.pythonPath": "./venv/bin/python"
+    "python.pythonPath": "/home/xyz/xiaoao/flask_learn/venv/bin/python2.7"
 }
