@@ -6,7 +6,8 @@ to_be_installed = [
     'flask_moment',
     'flask_script',
     'flask_wtf',
-    'flask_sqlalchemy'
+    'flask_sqlalchemy',
+    'pymysql'
 ]
 
 import_str = "__import__('{}')"
